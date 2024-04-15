@@ -1,3 +1,41 @@
-Update navigation bar styles
+name: Motor Rider Map CI/CD
 
-This commit refines the styles of the navigation bar in the Motor Rider Map application. It adjusts the spacing, font sizes, and colors to improve readability and visual consistency across different screen sizes. Additionally, it adds hover effects to the navigation links for better interactivity. Fixes #42.
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: |
+        # Example: If you're using npm
+        npm install
+        # Or if you're using yarn
+        # yarn install
+
+    - name: Build project
+      run: |
+        # Example: If you're using React
+        npm run build
+        # Or if you're using Angular
+        # ng build --prod
+
+    - name: Deploy to server
+      run: |
+        # Example: If you're deploying to a server via SSH
+        ssh user@server 'cd /path/to/project && git pull && npm install && npm run build && pm2 restart server'
+        # Adjust the commands based on your deployment setup
