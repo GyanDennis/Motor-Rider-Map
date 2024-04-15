@@ -1,0 +1,3 @@
+Update navigation bar styles
+
+This commit refines the styles of the navigation bar in the Motor Rider Map application. It adjusts the spacing, font sizes, and colors to improve readability and visual consistency across different screen sizes. Additionally, it adds hover effects to the navigation links for better interactivity. Fixes #42.
