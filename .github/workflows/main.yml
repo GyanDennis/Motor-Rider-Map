@@ -22,20 +22,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        # Example: If you're using npm
         npm install
-        # Or if you're using yarn
-        # yarn install
 
     - name: Build project
       run: |
-        # Example: If you're using React
         npm run build
-        # Or if you're using Angular
-        # ng build --prod
 
     - name: Deploy to server
       run: |
-        # Example: If you're deploying to a server via SSH
+        # Adjust these commands based on your deployment setup
         ssh user@server 'cd /path/to/project && git pull && npm install && npm run build && pm2 restart server'
-        # Adjust the commands based on your deployment setup
