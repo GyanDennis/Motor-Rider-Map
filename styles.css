@@ -1,0 +1,28 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the size and position of the map container */
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+/* Custom styles for map markers */
+.marker {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/* Custom styles for info windows */
+.info-window {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
